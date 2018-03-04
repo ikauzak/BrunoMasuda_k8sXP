@@ -1,0 +1,26 @@
+NAME      STATUS    ROLES     AGE       VERSION   DC
+k8-1      Ready     master    1d        v1.9.3    BR
+k8-2      Ready     <none>    1d        v1.9.3    USA
+k8-3      Ready     <none>    1d        v1.9.3    UK
+ 
+NAME                           READY     STATUS    RESTARTS   AGE       IP          NODE
+nginx-masuda-7b54d589d-gk6lh   1/1       Running   0          23s       10.40.0.6   k8-3
+nginx-masuda-7b54d589d-h7csd   1/1       Running   0          23s       10.40.0.3   k8-3
+nginx-masuda-7b54d589d-lfxzb   1/1       Running   0          23s       10.40.0.4   k8-3
+nginx-masuda-7b54d589d-mgx4w   1/1       Running   0          23s       10.40.0.2   k8-3
+nginx-masuda-7b54d589d-nsv92   1/1       Running   0          23s       10.40.0.5   k8-3
+ 
+NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes     ClusterIP   10.96.0.1       <none>        443/TCP        1d
+nginx-masuda   NodePort    10.105.65.158   <none>        80:31212/TCP   10m
+ 
+curl 10.105.65.158
+<html>
+<title>
+<head>
+<body>
+Pagina personalizada por Bruno Masuda
+</body>
+</head>
+</title>
+</html>
